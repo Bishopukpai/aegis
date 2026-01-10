@@ -1,0 +1,14 @@
+
+name: DevOps Agent CI
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "CI initialized by DevOps Agent"
+      - run: exit 1
